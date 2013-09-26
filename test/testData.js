@@ -1,4 +1,12 @@
 var testPoints = [
+  {code: 'testmerc',
+	xy: [-45007.0787624, 4151725.59875],
+	ll: [5.364315,46.623154]
+  },
+  {code: 'testmerc2',
+	xy: [4156404,7480076.5],
+	ll: [37.33761240175515, 55.60447049026976]
+  },
   {code: 'PROJCS["CH1903 / LV03",GEOGCS["CH1903",DATUM["D_CH1903",SPHEROID["Bessel_1841",6377397.155,299.1528128]],PRIMEM["Greenwich",0],UNIT["Degree",0.017453292519943295]],PROJECTION["Hotine_Oblique_Mercator_Azimuth_Center"],PARAMETER["latitude_of_center",46.95240555555556],PARAMETER["longitude_of_center",7.439583333333333],PARAMETER["azimuth",90],PARAMETER["scale_factor",1],PARAMETER["false_easting",600000],PARAMETER["false_northing",200000],UNIT["Meter",1]]',
   xy: [660389.4751110513, 185731.68482649108],
     ll: [8.23, 46.82],
@@ -21,11 +29,11 @@ var testPoints = [
 	xy: [ 736106.55, 5893331.11 ], 
 	ll: [11.0, 53.0]  
   },
-  {code: 'PROJCS["Sphere_Eckert_VI",GEOGCS["GCS_Sphere",DATUM["Not_specified_based_on_Authalic_Sphere",SPHEROID["Sphere",6371000,0]],PRIMEM["Greenwich",0],UNIT["Degree",0.017453292519943295]],PROJECTION["Eckert_VI"],PARAMETER["False_Easting",0],PARAMETER["False_Northing",0],PARAMETER["Central_Meridian",0],UNIT["Meter",1],AUTHORITY["EPSG","53010"]]', /* eck6 with spherical datum */ 
+  {code: 'PROJCS["Sphere_Eckert_VI",GEOGCS["GCS_Sphere",DATUM["Not_specified_based_on_Authalic_Sphere",SPHEROID["Sphere",6371000,0]],PRIMEM["Greenwich",0],UNIT["Degree",0.017453292519943295]],PROJECTION["Eckert_VI"],PARAMETER["False_Easting",0],PARAMETER["False_Northing",0],PARAMETER["Central_Meridian",0],UNIT["Meter",1],AUTHORITY["EPSG","53010"]]',
 	xy: [12697777.70, 3747394.62], 
 	ll: [145.0, 30.0] 
   }, 
-  {code: 'PROJCS["World_Eckert_VI",GEOGCS["GCS_WGS_1984",DATUM["WGS_1984",SPHEROID["WGS_1984",6378137,298.257223563]],PRIMEM["Greenwich",0],UNIT["Degree",0.017453292519943295]],PROJECTION["Eckert_VI"],PARAMETER["False_Easting",0],PARAMETER["False_Northing",0],PARAMETER["Central_Meridian",0],UNIT["Meter",1],AUTHORITY["EPSG","54010"]]', /* eck6 with elliptical datum */ 
+  {code: 'PROJCS["World_Eckert_VI",GEOGCS["GCS_WGS_1984",DATUM["WGS_1984",SPHEROID["WGS_1984",6378137,298.257223563]],PRIMEM["Greenwich",0],UNIT["Degree",0.017453292519943295]],PROJECTION["Eckert_VI"],PARAMETER["False_Easting",0],PARAMETER["False_Northing",0],PARAMETER["Central_Meridian",0],UNIT["Meter",1],AUTHORITY["EPSG","54010"]]', 
 	xy: [12712002.16, 3751592.57], 
 	ll: [145.0, 30.0] 
   }, 
@@ -33,11 +41,11 @@ var testPoints = [
 	xy: [ 736106.55, 5893331.11 ], 
 	ll: [11.0, 53.0]  
   },
-  {code: 'PROJCS["Sphere_Eckert_VI",GEOGCS["GCS_Sphere",DATUM["D_Sphere",SPHEROID["Sphere",6371000,0]],PRIMEM["Greenwich",0],UNIT["Degree",0.017453292519943295]],PROJECTION["Eckert_VI"],PARAMETER["False_Easting",0],PARAMETER["False_Northing",0],PARAMETER["Central_Meridian",0],UNIT["Meter",1]]', /* eck6 with spherical datum */ 
+  {code: 'PROJCS["Sphere_Eckert_VI",GEOGCS["GCS_Sphere",DATUM["D_Sphere",SPHEROID["Sphere",6371000,0]],PRIMEM["Greenwich",0],UNIT["Degree",0.017453292519943295]],PROJECTION["Eckert_VI"],PARAMETER["False_Easting",0],PARAMETER["False_Northing",0],PARAMETER["Central_Meridian",0],UNIT["Meter",1]]',
 	xy: [12697777.70, 3747394.62], 
 	ll: [145.0, 30.0] 
   }, 
-  {code: 'PROJCS["World_Eckert_VI",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137,298.257223563]],PRIMEM["Greenwich",0],UNIT["Degree",0.017453292519943295]],PROJECTION["Eckert_VI"],PARAMETER["False_Easting",0],PARAMETER["False_Northing",0],PARAMETER["Central_Meridian",0],UNIT["Meter",1]]', /* eck6 with elliptical datum */ 
+  {code: 'PROJCS["World_Eckert_VI",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137,298.257223563]],PRIMEM["Greenwich",0],UNIT["Degree",0.017453292519943295]],PROJECTION["Eckert_VI"],PARAMETER["False_Easting",0],PARAMETER["False_Northing",0],PARAMETER["Central_Meridian",0],UNIT["Meter",1]]',
 	xy: [12712002.16, 3751592.57], 
 	ll: [145.0, 30.0] 
   }, 
@@ -45,11 +53,11 @@ var testPoints = [
 	xy: [ 736106.55, 5893331.11 ], 
 	ll: [11.0, 53.0]  
   },
-  {code: 'EPSG:53010', /* eck6 with spherical datum */ 
+  {code: 'EPSG:53010',
 	xy: [12697777.70, 3747394.62], 
 	ll: [145.0, 30.0] 
   }, 
-  {code: 'EPSG:54010', /* eck6 with elliptical datum */ 
+  {code: 'EPSG:54010',
 	xy: [12712002.16, 3751592.57], 
 	ll: [145.0, 30.0] 
   }, 
@@ -143,11 +151,6 @@ var testPoints = [
       xy:-4
     }
   },
-    /*{
-    code:'EPSG:3975',
-    ll:[-9.764450683, 25.751953],
-    xy:[-942135.525095996, 3178441.8667094777]
-  },*/
    {
     code:'PROJCS["World Equidistant Cylindrical (Sphere)",GEOGCS["Unspecified datum based upon the GRS 1980 Authalic Sphere",DATUM["Not_specified_based_on_GRS_1980_Authalic_Sphere",SPHEROID["GRS 1980 Authalic Sphere",6371007,0,AUTHORITY["EPSG","7048"]],AUTHORITY["EPSG","6047"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4047"]],UNIT["metre",1,AUTHORITY["EPSG","9001"]],PROJECTION["Equirectangular"],PARAMETER["latitude_of_origin",0],PARAMETER["central_meridian",0],PARAMETER["false_easting",0],PARAMETER["false_northing",0],AUTHORITY["EPSG","3786"],AXIS["X",EAST],AXIS["Y",NORTH]]',
     ll:[-1.7539371169976, 12.632997701986],
